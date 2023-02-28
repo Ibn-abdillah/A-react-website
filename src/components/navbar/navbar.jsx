@@ -67,7 +67,7 @@ function Navbar() {
           <p>Call Us</p>
           <p>1-800-190-3425</p>
           <p>Because Money</p>
-          <p>Doesn't come with instructions</p>
+          <p>Doesn't come with instructions.</p>
           <button>FREE CONSULTATION</button>
         </div>
     </div>
