@@ -1,0 +1,40 @@
+.footer{
+    padding: 2rem 2rem 1rem;
+    background: #303030;
+}
+
+.footer ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.footer li{
+    margin: 0 15px;
+    color: #fff;
+    font-size: 14px;
+    transition: .5s;
+}
+
+.footer li:hover{
+    color: #000;
+}
+
+.footer p{
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    border-top: 2px solid #ccc;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+@media screen and (max-width: 320px) {
+    .footer li{
+        margin: 0px 3px;
+    }
+
+    .footer p{
+        font-size: 10px;
+    }
+}

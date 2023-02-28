@@ -1,0 +1,90 @@
+.demo{
+    padding: 3rem;
+    background: #ccc;
+}
+
+.demo .content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.demo .col-1, .demo .col-2{
+    flex-basis: 50%;
+}
+
+.demo .col-1{
+    max-width: 500px;
+}
+
+.demo p{
+    font-size: 22px;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.demo h1{
+    font-style: italic;
+    margin: 5px 0;
+}
+
+.demo small{
+    color: black;
+}
+
+.demo button{
+    background: black;
+    color: #fff;
+    padding: 8px 10px;
+    border: 0;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: .5s;
+    display: block;
+}
+
+.demo button:hover{
+    background: green;
+    color: #fff;
+}
+
+.demo .col-2{
+    max-width: 500px;
+    padding: 20px;
+}
+
+.demo .col-2 iframe{
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .demo .col-1, .demo .col-2{
+        flex-basis: 100%;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .demo .col-1, .demo .col-2{
+        padding: 0px;
+    }
+    .demo p{
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+    
+    .demo h1{
+        font-size: 20px;
+        margin: 5px 0;
+    }
+    
+    .demo small{
+        font-size: 13px;
+    }
+
+    .demo button{
+        font-size: 11px;
+        margin-bottom: 30px;
+    }
+}

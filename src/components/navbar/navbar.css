@@ -1,0 +1,152 @@
+.navbar{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url(../../assets/home.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+nav{
+    padding: 0 20px;
+    height: 90px;
+    background: rgba(0,0,0,.4);
+    transition: .5s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 250px;
+}
+
+.logo img{
+    width: 100%;
+}
+
+.items {
+    display: flex;
+}
+
+.items li{
+    margin: 0 10px;
+}
+
+.hamburger{
+    font-size: 30px;
+    color: #000;
+    display: none;
+}
+
+.navbar .content{
+    margin-top: 150px;
+    padding: 20px 40px;
+}
+
+.navbar p{
+    color: #fff;
+    margin: 5px 0;
+}
+
+.navbar p:nth-child(1){
+    font-size: 22px;
+    font-style: italic;
+}
+
+.navbar p:nth-child(2){
+    font-size: 24px;
+}
+
+.navbar p:nth-child(3){
+    font-size: 30px;
+}
+
+.navbar p:nth-child(4){
+    font-size: 30px;
+}
+
+.navbar button{
+    padding: 10px 15px;
+    background: gold;
+    border-radius: 5px;
+    border: 0;
+    font-style: italic;
+    font-weight: bold;
+    transition: .5s;
+}
+
+.navbar button:hover{
+    background: #000;
+    color: khaki;
+}
+
+@media screen and (max-width: 600px) {
+    nav{
+        height: 50px;
+        background: rgba(13, 174, 228, 0.7);
+    }
+
+    .logo{
+        width: 180px;
+    }
+
+    .items{
+        position: fixed;
+        flex-direction: column;
+        top: 34px;
+        background: rgba(13, 174, 228, 0.7);
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        border-top: 2px solid #b9c516;
+        left: -100%;
+        padding: 0;
+        transition: .5s;
+    }
+
+    .items.active{
+        left: 0;
+    }
+
+    .items li{
+        margin: 20px 0;
+    }
+
+    .items a{
+        font-size: 22px;
+    }
+
+    .hamburger{
+        display: flex;
+        position: fixed;
+        right: 20px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .logo{
+        width: 150px;
+    }
+
+    .navbar .content{
+        margin-top: 50px;
+    }
+    
+    .navbar p:nth-child(1){
+        font-size: 20px;
+    }
+    
+    .navbar p:nth-child(2){
+        font-size: 21px;
+    }
+    
+    .navbar p:nth-child(3){
+        font-size: 24px;
+    }
+    
+    .navbar p:nth-child(4){
+        font-size: 24px;
+    }
+    
+}

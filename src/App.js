@@ -1,23 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+
+import About from './components/about/about';
+import Demo from './components/demo/demo';
+import Footer from './components/footer/footer';
+import Navbar from './components/navbar/navbar';
+import Testimonial from './components/testimonial/testimonial';
+import { FaArrowCircleUp } from 'react-icons/fa'
+
+
+import './App.css'
+import { useEffect, useState } from 'react';
 
 function App() {
+  const [scrollBtn, setScrollBtn] = useState(false)
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if(window.scrollY > 100) {
+        setScrollBtn(true)
+      }else{
+        setScrollBtn(false)
+      }
+    })
+  }, [])
+
+  const scrollUp = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <About />
+      <Testimonial />
+      <Demo />
+      <Footer />
+      {scrollBtn && <FaArrowCircleUp  className='icon' onClick={scrollUp} />}
     </div>
   );
 }

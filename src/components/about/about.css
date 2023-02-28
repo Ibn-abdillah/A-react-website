@@ -1,0 +1,80 @@
+.about{
+    background: #ccc;
+    padding: 5rem 3rem;
+}
+
+.about .content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.about .col-1, .demo .col-2{
+    flex-basis: 50%;
+}
+
+.about .col-1{
+    padding: 20px;
+}
+
+.about .col-1 img{
+    width: 100%;
+    margin: auto;
+}
+
+.about .col-2{
+    flex-basis: 50%;
+    padding: 20px;
+    max-width: 500px;
+}
+
+h2{
+    text-align: center;
+    position: relative;
+    font-size: 35px;
+}
+
+h2::after{
+    content: "";
+    width: 70px;
+    height: 5px;
+    background: green;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    border-radius: 10px;
+}
+
+.about button{
+    padding: 10px 20px;
+    background: green;
+    color: #fff;
+    font-style: italic;
+    border: none;
+    outline: 0;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.about button:hover{
+    background: #000;
+    color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+    .about .col-1, .about .col-2{
+        flex-basis: 100%;
+    }
+    
+    .about .col-1{
+        padding: 0px;
+    }
+
+    .about .content{
+        flex-wrap: wrap;
+    }
+
+}
+
